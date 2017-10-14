@@ -1,0 +1,342 @@
+<html>
+<head>
+<style>
+h1 {
+	color:Cyan;
+	font-size:169px;
+</style>
+		
+
+<div class="w3-bar w3-Cyan">
+  <button class="w3-bar-item w3-button" onclick="openPage('Home')">Location</button>
+  <button class="w3-bar-item w3-button" onclick="openPage('Kirabati Island')">Tarawa Island </button>
+  <button class="w3-bar-item w3-button" onclick="openPage('Kirabati Culture')">The Culture</button>
+  <button class="w3-bar-item w3-button" onclick="openPage('History')">Kiribati History</button>
+</div>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+</head>
+
+
+<body>
+<div class="w3-container">
+  <h1 class="w3-bottom w3-animate-fading"id = "Intro">Welcome To Your Dream vacation in the Kiribati Islands. Press any of the buttons to continue.</h1>
+</div>
+
+<div id="Home" class="w3-container w3-display-container page" style="display:none">
+ <h2><center> The Kiribati Islands</center></h2>
+<div id="googleMap"  style="width:50%;height:50%;  float:left;"></div>
+
+<div id="googleMaps" style="width:50%;height:50%;  float:left;"></div>
+
+
+<style>
+p {
+text-shadow: 0 0 3px #FF0000;
+}
+</style>
+<p> The Kiribati Islands are an archipelago in the pacific ocean. The main/capital island is Tarawa. To travel there you need to fly through Fiji to get to bonriki international airport.</p>
+<div id="googleMas" style="width:50%;height:50%;  float:left;"></div>
+<img src="Bonrikiairport.jpg" align=Right width=49%; height=50%;>
+<script>
+
+var map1;
+var map2;
+var map3;
+var war1;
+var war2;
+function myMap() {
+
+	var mapCenter1 = new google.maps.LatLng(1.65, 172.7);
+	var mapProp1= {
+		center:mapCenter1,
+		zoom:11,
+	};
+
+
+	var mapCenter2 = new google.maps.LatLng(1.65, 172.7);
+	var mapProp2= {
+		center:mapCenter2,
+		zoom:11,
+		mapTypeId: google.maps.MapTypeId.SATELLITE
+	};
+	
+	var mapCenter3 = new google.maps.LatLng(39,133);
+	var mapProp3= {
+		center:mapCenter3,
+		zoom:3,
+		mapTypeId: google.maps.MapTypeId.ROADMAP 
+	};
+
+    var warCenter1 = new google.maps.LatLng(1.364865, 172.911511);
+	var warProp1= {
+		center:warCenter1,
+		zoom:15,
+	};
+
+
+	var warCenter2 = new google.maps.LatLng(2.333267, 172.126139);
+	var warProp2= {
+		center:warCenter2,
+		zoom:8,
+	
+	};
+	
+	
+var kirabati = new google.maps.LatLng(1.379689, 173.156465);
+
+var lax = new google.maps.LatLng(33.943548, -118.404704);
+
+var fuji = new google.maps.LatLng(-18.045895, 178.559945);
+
+
+var rarrow2 = new google.maps.LatLng(1.357239, 172.926403);
+
+var rarrow3 = new google.maps.LatLng(1.357529, 172.928420);
+
+var rarrow4 = new google.maps.LatLng(1.358256, 172.931713);
+
+var barrow1 = new google.maps.LatLng(1.355682, 172.927765);
+
+var barrow2 = new google.maps.LatLng(1.356261, 172.929884);
+
+var barrow3 = new google.maps.LatLng(1.356443, 172.931863);
+
+var barrow4 = new google.maps.LatLng(1.355992, 172.924957);
+
+var explo1 = new google.maps.LatLng(1.983467, 173.253024);
+
+var explo2 = new google.maps.LatLng(1.720657, 172.989010);
+
+var explo3 = new google.maps.LatLng(1.554802, 172.989181);
+
+var explo4 = new google.maps.LatLng(1.369719, 173.146979);
+
+var explo5 = new google.maps.LatLng(1.356990, 172.929265);
+
+var explo6 = new google.maps.LatLng(1.003252, 173.037131);
+
+var explo1Marker = new google.maps.Marker({position: explo1, icon:'Fightsplosion.png'});
+
+var explo2Marker = new google.maps.Marker({position: explo2, icon:'Fightsplosion.png'});
+
+var explo3Marker = new google.maps.Marker({position: explo3, icon:'Fightsplosion.png'});
+
+var explo4Marker = new google.maps.Marker({position: explo4, icon:'Fightsplosion.png'});
+
+var explo5Marker = new google.maps.Marker({position: explo5, icon:'Fightsplosion.png'});
+
+var explo6Marker = new google.maps.Marker({position: explo6, icon:'Fightsplosion.png'});
+
+
+
+
+var kirabatiMarker = new google.maps.Marker({position: kirabati, icon:'kiribatiflagmarker.png'});
+
+var laxMarker = new google.maps.Marker({position: lax, icon:'airplanefl.png'});
+
+var fujiMarker = new google.maps.Marker({position: fuji, icon:'airplanefl.png'});
+
+
+
+var rarrow2Marker = new google.maps.Marker({position: rarrow2, icon:'japarrow.png'});
+
+var rarrow3Marker = new google.maps.Marker({position: rarrow3, icon:'japarrow.png'});
+
+var rarrow4Marker = new google.maps.Marker({position: rarrow4, icon:'rarow.png'});
+
+var barrow1Marker = new google.maps.Marker({position: barrow1, icon:'bluearrow.png'});
+
+var barrow2Marker = new google.maps.Marker({position: barrow2, icon:'bluearrow.png'});
+
+var barrow3Marker = new google.maps.Marker({position: barrow3, icon:'bluearrow.png'});
+
+var barrow4Marker = new google.maps.Marker({position: barrow4, icon:'leftblue.gif'});
+
+var myTrip = [lax,fuji,kirabati];
+var flightPath = new google.maps.Polyline({
+  path:myTrip,
+  strokeColor:"#9e42f4",
+  strokeOpacity:0.8,
+  strokeWeight:2
+});
+
+
+
+	map1=new google.maps.Map(document.getElementById("googleMap"),mapProp1);
+	map2=new google.maps.Map(document.getElementById("googleMaps"),mapProp2);
+	map3=new google.maps.Map(document.getElementById("googleMas"),mapProp3);
+	war1=new google.maps.Map(document.getElementById("warMap"),warProp1);
+	war2=new google.maps.Map(document.getElementById("warrMap"),warProp2);
+	
+	kirabatiMarker.setMap(map3);
+		laxMarker.setMap(map3);
+			fujiMarker.setMap(map3);
+	flightPath.setMap(map3);
+
+
+rarrow2Marker.setMap(war1);
+
+rarrow3Marker.setMap(war1);
+
+rarrow4Marker.setMap(war1);
+
+barrow1Marker.setMap(war1);
+
+barrow2Marker.setMap(war1);
+
+barrow3Marker.setMap(war1);
+
+barrow4Marker.setMap(war1);
+
+explo1Marker.setMap(war2);
+
+explo2Marker.setMap(war2);
+
+explo3Marker.setMap(war2);
+
+explo4Marker.setMap(war2);
+
+explo5Marker.setMap(war2);
+
+explo6Marker.setMap(war2);
+}
+</script>
+
+
+
+
+
+
+</div>
+<div id="Kirabati Island" class="w3-container w3-display-container page" style="display:none">
+<style>
+p2 {
+font-size:20px;
+text-shadow: 0 0 3px #1b7c16;
+}
+
+</style>
+<p2><center> The Island of Tarawa had a bloody ww2 battle take place. The battle was fought by the Americans and Japanese during the pacific campaign.</center><p2>
+<div id="warMap"  style="width:50%;height:50%;  float:left;"></div>
+<div id="warrMap" style="width:50%;height:50%;  float:left;"></div>
+<p2><center> Evidence of the battle still exists in the form of battle plans and left over Japanese defences</center><p2>
+<img src="Battle Plans.jpg" align=Left width=49%; height=50%;>
+<img src="TarawaCannon.jpg" align=Right width=49%; height=50%;>
+
+</div>
+<div id="Kirabati Culture" class="w3-container w3-display-container page" style="display:none">
+<html>
+
+<head>
+
+<style>
+h1{
+	font-size:25px
+	color: Green
+}
+h2{
+	color: Red
+</style>
+
+<body>
+<center><h1>Kiribati Culture</h1></center>
+
+<p></p>
+
+<center><h2>Kiribati Independence Day</h2></center>
+<style>
+p5 {
+    color: white;
+    text-shadow: 0 0 3px black, 0 0 5px #672b6d;
+}
+</style>
+<p5>Kiribati's Independence Day is July 12. This is because Kiribati gained their independence from the United Kingdom on July 12, 1979. This is when the Kiribati Islands changed their name from the Gilbert Islands to the Kiribati Islands. Also in Kiribati, their National Day celebrations last for a few days because the government appoints days of several public holidays during their Independence Day week.
+
+<center><h2>Kiribati Martial Arts</h2></center>
+<center><img src="KiribatiMartialArts.jpg" height=250px></center>
+<p5>Kiribati has been known for their traditional martial arts which are kept as a secret in several families over generations. Their fighting technique is not like the Asian's martial arts. In Kiribati's martial arts, speed is more important than power. Some of the traditional martial arts are Nabakai, Nakara, Ruabou, Tabiang, Taborara, Tebania, Temataua, Te Rawarawanimon, and Terotauea.
+
+<center><h2>Kiribati Dance</h2></center>
+<center><img src="KiribatiDance.jpg" height = 250px></center>
+<p5>In Kiribati dance there is an emphasis on the outstretch of arms and birdlike movement in the head. The Frigate bird that is on the Kiribati flag represents the kind of birdlike style of dance that the Kiribati people use. While in modern Hawaiian Hula dancers smile, in Kiribati dances smiling is considered vulgar. This is because Kiribati dancing is used as a form of storytelling and a display of the skill of the dancer.
+
+<center><h2>Kiribati Music</h2></center>
+<p5>Kiribati music is usually based around chanting and other forms of vocalizing and body percussions. Public performances are usually done by a seated chorus with a guitar. During formal performances, a wooden box is used as a percussion instrument. The box is made to give a hollow tone. 
+
+
+</body>
+
+</head>
+
+</html>
+
+</div>
+<div id="History" class="w3-container w3-display-container page" style="display:none">
+<style>
+h1 {
+	font-size: 30px;
+	color: Red;
+	
+h2 {
+	font-size:20px'
+	color:orange;
+	
+
+</style>
+
+<center><h1>Kiribati History</h1></center>
+<body>
+
+<center><h2>Kiribati's Discovery</h2></center>
+<style>
+p1 {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+</style>
+<p1>Kiribati was discovered in 1788 when the British Captain Thomas Gilbert sighted the islands and named them the Gilbert Islands. Later when the Gilbert Islands gained their independence, they changed their name to Kiribati. 
+<center><h2>World War II</h2></center>
+<p1>During World War II, Japan had seized many parts of the Kiribati Islands to form part of their defences. When the allied forces attacked the Japanese forces that had taken place on the Kiribati Islands, it led to some of the bloodiest battles in World War II. These battles were the Gilbert and Marshall Island Campaign which was a series of battles fought from November 1943 to February 1944. These battles were between the United States and Japan. During these battles, a total of about 30,000 people had died, 7000 wounded, and 400 captured.
+
+<center><h2>Kiribati Flag</h2></center>
+<p>
+<img src="kiribatiflag.gif" alt="waving Kiribati Flag">
+
+<p1>The Kiribati flag was adopted on July 12 1979. The blue and white bands represent the Ocean that surrounds Kiribati and the golden bird that is flying over the rising sun represents their command of the sea. The bird on their flag is called a gold frigate bird which is a bird that can be found in Kiribati. The frigate bird represents the Kiribati's command of the sea, power, and freedom of the Kiribati. 
+
+<center><h2>Tarawa</h2></center>
+
+<p1>Tarawa is currently the capital of Kiribati and is best known for being the site of the Battle of Tarawa during WWII. Tarawa has 193 square miles in area. In Kiribati mythology, Tarawa was on the Earth when land, ocean, and the sky had not been cleaved yet by Nareau the spider. This is why they call the sky karawa and the ocean marawa. Nareau also named the piece of land that "Riiki", another god, stood upon when he lifted the sky Tarawa. This is how Tarawa received its name. 
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyvMKYiigLKqY5SFsWjRZXwxDmEFiscnY&callback=myMap"></script>
+</div>
+
+
+<script>
+function openPage(pageName) {
+    var i;
+    var x = document.getElementsByClassName("page");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(pageName).style.display = "block";
+    document.getElementById("Intro").style.display= "none";
+    google.maps.event.trigger(map1, 'resize');
+        google.maps.event.trigger(map2, 'resize');
+        	google.maps.event.trigger(map3, 'resize');
+google.maps.event.trigger(war1, 'resize');
+        google.maps.event.trigger(war2, 'resize');
+
+
+}
+</script>
+
+
+</body>
+</html>
